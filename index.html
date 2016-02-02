@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Easynav Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<!-- Twitter Bootstrap -->
+		<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+		<header id="header">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#index" class="navbar-brand logo-active" id="easynav">Easynav</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#example0">First Example</a>
+							</li>
+							<li>
+								<a href="#example1">Second Example</a>
+							</li>
+							<li>
+								<a href="#example2">Third Example</a>
+							</li>
+							<li>
+								<a href="#example3">Fourth Example</a>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</nav>
+		</header>
+		</div>
+		<div id="main">
+			<div class="container" id="main-container">
+				<div id="loading-area"></div>
+				<div id="content"></div>
+			</div>
+		</div>
+		<footer>
+			<p>
+				Easynav Demo.
+			</p>
+		</footer>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+		<script src="js/less.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-hashchange/1.3/jquery.ba-hashchange.js"></script>
+		<script src="js/easynav.js"></script>
+		<script>
+			$(document).ready(function() {
+				var nav = $("nav").easy(["index_content", "example0", "example1", "example2", "example3"], true);
+				nav.associate(["index_content.html", "example0.html", "example1.html", "example2.html", "example3.html"]);
+				nav.watch();
+			});
+		</script>
+	</body>
+</html>
